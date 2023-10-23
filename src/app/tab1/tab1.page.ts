@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
 import { ExploreContainerComponent } from '../explore-container/explore-container.component';
+import { SenhasService } from '../services/senhas.service';
 
 @Component({
   selector: 'app-tab1',
@@ -10,5 +11,6 @@ import { ExploreContainerComponent } from '../explore-container/explore-containe
   imports: [IonicModule, ExploreContainerComponent],
 })
 export class Tab1Page {
-  constructor() {}
+  inputNovaSenha: string = '';
+  constructor(public senhasService: SenhasService) {}
 }
